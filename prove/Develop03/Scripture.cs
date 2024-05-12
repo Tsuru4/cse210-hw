@@ -6,6 +6,18 @@ public class Scripture
 
     public Scripture(string referenceText, string scriptureText, int ratio)
     {
+        ReConstruct(referenceText, scriptureText, ratio);
+    }
+
+    public Scripture(string referenceText, string scriptureText)
+    {
+        //this constructor is not currently in use, but is included as an option for programs that do not wish to specify the ratio
+        ReConstruct(referenceText, scriptureText, 6);
+    }
+
+    private void ReConstruct(string referenceText, string scriptureText, int ratio)
+    {
+        //I feel that there is a better way to create a basic constructor, but I can't remember what it is. But this is useful for future use if I ever wish to reset the scripture, so I'm keeping this as is.
         _reference = new Reference(referenceText);
         _words = new List<Word>();
         GenerateWords(scriptureText);

@@ -1,5 +1,6 @@
 using System;
 
+//Exceeded core requirements by making the rate at which the words disappear customizable.
 class Program
 {
     static void Main(string[] args)
