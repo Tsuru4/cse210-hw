@@ -4,10 +4,28 @@ class Program
 {
     static void Main(string[] args)
     {
-        BreathingActivity a1 = new BreathingActivity();
-        ListingActivity a2 = new ListingActivity();
-        ReflectionActivity a3 = new ReflectionActivity();
-        a2.Run();
-        a3.Run();
+        int choice = 0;
+        while (choice != 4)
+        {
+            Console.WriteLine("Menu Options:\n\t1. Breathing\n\t2. Reflecting\n\t3. Listing\n\t4. Quit");
+            Console.Write("Select a choice from the menu: ");
+            choice = int.Parse(Console.ReadLine());
+
+            if (choice == 1)
+            {
+                BreathingActivity activity = new BreathingActivity();
+                activity.Run();
+            }
+            else if (choice == 2)
+            {
+                ReflectionActivity activity = new ReflectionActivity();
+                activity.Run();
+            }
+            else if (choice == 3)
+            {
+                ListingActivity activity = new ListingActivity();
+                activity.Run();
+            }
+        }
     }
 }
