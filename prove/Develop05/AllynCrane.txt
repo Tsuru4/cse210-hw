@@ -1,0 +1,7 @@
+20
+simple,learn C#,learn enough C# to demonstrate polymorphism,40,True
+simple,learn Mandarin,learn enough Mandarin to pass Mandarin 102,1000,False
+eternal,pray,pray to Heavenly Father,10
+checklist,clean,clean the apartment and bedroom,7,14,102,16
+eternal,scriptures,study the Book of Mormon,10
+checklist,homework,complete the weekly assignments,10,7,230,5
