@@ -22,6 +22,9 @@ class Program
         Console.WriteLine("Please select the probability at which you want words to disappear on a scale of 1:X\n (Must be an integer greater than 1. The lower the number, the faster the words disappear. 6 is recommended)");
         int ratio = int.Parse(Console.ReadLine());
 
+        bool doOver = true;
+        while (doOver)
+        {
         Scripture scripture = new Scripture(reference, text, ratio);
         
         string userInput = "";
@@ -32,6 +35,9 @@ class Program
             Console.WriteLine("\nType quit to exit, otherwise press enter to continue. ");
             userInput = Console.ReadLine();
             scripture.HideRandom();
+        }
+        Console.WriteLine("Do over?");
+        doOver = ("y"==Console.ReadLine());
         }
     }
 }
